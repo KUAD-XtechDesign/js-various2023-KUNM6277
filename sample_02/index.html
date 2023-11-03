@@ -3,43 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 必要なライブラリをネット上から直接参照 CDN -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css"/>
     <!-- 自分のcss -->
     <link rel="stylesheet" href="./css/style02.css" />
-    <title>sample02</title>
+    <title>漢の字</title>
+
+    
   </head>
   <body class="one">
     <div class="wrapper">
       
       <header>
-        <h1>site name</h1>
+        <h1><img src="images/logo.png" alt="漢"></h1>
         <div id="wave"></div>
-        <div id="line"></div>
+        <ul id="menu">
+          <li id="btn01">　　</li>
+          <li id="btn02" class="custom-font">春秋戦国</li>
+          <li id="btn03" class="custom-font">漢王朝</li>
+          <li id="btn04" class="custom-font">流伝古文</li>
+          <li id="btn05" class="custom-font">現代</li>
+        </ul>
+        
       </header>
 
       <div id="back">
-        <div id="backimg01" class="backimg"><img src="./images/back01.jpg" alt=""></div>
-        <div id="backimg02" class="backimg"><img src="./images/back02.jpg" alt=""></div>
-        <div id="backimg03" class="backimg"><img src="./images/back03.jpg" alt=""></div>
+        <div id="backimg01" class="back"></div>
       </div>
 
-      <ul id="menu">
-        <li id="btn01">MENU1</li>
-        <li id="btn02">MENU2</li>
-        <li id="btn03">MENU3</li>
-      </ul>
+     
 
       <div id="content">
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
+        <div class="set1">
+
+         <img src="images/logo.png" alt="篆" class="篆">
+         <img src="images/漢-传抄古文.png" alt="传抄古文" class="传抄古文">
+
+        </div>
+
+        
+        <div class="set2">
+
+         
+         <div class="set201"></div>
+         <div data-aos="fade-left"
+         data-aos-anchor="#example-anchor"
+         data-aos-offset="500"
+         data-aos-duration="500">
+
+         </div>
+
+        </div>
+
+     
+      
       </div>
     </div>
 
@@ -47,6 +63,7 @@
     <!-- 必要なライブラリをネット上から直接参照 CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- 自分のjs -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script02.js"></script>
   </body>
 </html>
