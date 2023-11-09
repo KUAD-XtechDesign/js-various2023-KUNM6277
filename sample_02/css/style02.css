@@ -39,31 +39,7 @@ header img[alt="漢"] {
 
 }
 
-#wave{
-  width:60px;
-  height: 60px;
-  background-image: url(../images/wave.png);
-  background-size: 60px auto;
-  background-position: center center;
-  background-repeat: repeat-x;
-  margin-left: auto;
-}
 
-#menu {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  top: 100px;
-  font-size: 24px;
-  font-family: 'Long Cang', sans-serif;
-  line-height: 1;
-  left: 40px;
-  right: 40px; 
-  z-index: 100;
-  cursor: pointer;
-  white-space: nowrap;
-  justify-content: space-between; /* 菜单项之间的间距自动调整 */
-}
 
 #content{
 
@@ -71,21 +47,15 @@ header img[alt="漢"] {
   margin: 100px auto;
   padding: 20px;
   max-width: 1000px;
-
-  
 }
 
-/* 在CSS中定义一个CSS变量 */
-:root {
-  --border-radius: 3px; 
-}
 
 .set1{
   background-color: rgba(255, 255, 255, 0.8);
   min-height: 600px;
   margin-top: 20px;
   margin-bottom: 40px;
-  border: 2px solid #1b7d84; 
+  border: 2px solid #af6b28; 
   border-radius: var(--border-radius); /* 使用CSS变量来设置圆角 */
 
   /*追加しました。 */
@@ -173,7 +143,7 @@ header img[alt="漢"] {
   position: absolute; 
 }
 
-/*小窗口开始*/
+/*小窗口*/
 /* 初始状态 */
 .image-container {
   position: relative;
@@ -189,45 +159,110 @@ header img[alt="漢"] {
 /* 小窗口样式 */
 .hover-window {
   position: absolute;
-  bottom: 100%;
+  top:0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px;
-  border-radius: 5px;
+  background-color: rgba(255, 217, 165, 0.3);
+  padding: 32px;
+  border-radius: 10px;
+  transition: border-radius 2s ease; 
   display: none;
+  height: auto;
+  width: 400px;
+  transition: all 10s ease;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.extra-info {
+  display: inline-block;
 }
 
 .image-container:hover .hover-window {
   display: block;
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
+
+.image-container:hover .hover-window.active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/*animation*/
+.hoverable-image {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hover-window {
+  transition: transform 0.5s ease;
+  
+}
+
 /*小窗口结束*/
 
 
 .set2{
-  background-color: rgba(223, 246, 240, 0.8);
+  background-color: rgba(245, 238, 222, 0.5);
   min-height: 400px;
   margin-bottom: 40px;
+
+  display:flex;
+  gap:20px;
 }
+
 
 .set201{
   background-color: rgba(255, 255, 255, 1);
   height: 150px;
-  width: 200px;
-  border: 1px solid #1b7d84; 
+  width: 150px;
+  border: 1px solid #af6b28; 
   border-radius: var(--border-radius); 
   margin-bottom: 40px;
   position: absolute;
   margin-top: 8%;
   margin-left: 5%
-  
 }
 
-body.one #backimg01,
-body.two #backimg02,
-body.three #backimg03{
-  opacity: 1;
+.set201 img {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
 }
+
+.set201 img:first-child {
+  opacity: 1; /* 第一张图片可见 */
+}
+
+.set202{
+  margin: 50px;
+  position:absolute;
+  left:200px;
+  width:auto;
+}
+
+.set202 p:first-child {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 22px; 
+}
+
+.set202 p {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px; 
+  line-height: 1.5; 
+}
+
+
+/*place for set203
+set2の一番下に置いて、set201の図象の変化と共に文書が変わる
+できなかった原因：いくつかの字の年代が確定できないからメインの説明ができない。時間も紹介できない説明文は、、
+*/
+
 
 #back{
   position: fixed;
@@ -235,7 +270,8 @@ body.three #backimg03{
   height: 100%;
   top: 0;
   left: 0;
-  background: #ffffff;
+  background-image:url(../images/background.png) ;
+  background-size: 100%;
 }
 
 
@@ -246,4 +282,3 @@ body.three #backimg03{
   height: 100%;
   object-fit: cover;
 }
-
