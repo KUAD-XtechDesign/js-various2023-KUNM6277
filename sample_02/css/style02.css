@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&family=Noto+Serif+SC&display=swap');
+
 
 li{
   list-style: none;
@@ -9,55 +10,259 @@ img{
 }
 
 header{
+
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 32px;
   display: flex;
   align-items: center;
   z-index: 100;
   top: 0;
+
 }
 
-#wave{
-  width:60px;
-  height: 60px;
-  background-image: url(../images/wave.png);
-  background-size: 60px auto;
-  background-position: center center;
-  background-repeat: repeat-x;
-  margin-left: auto;
+  .custom-font {
+    font-size: 16px; 
+    color: #000000; 
+  }
+
+
+header img[alt="漢"] {
+  top: 5px;
+  margin-left: 12px;
+  width: 56px;
+  height: auto;
+  display: grid;
+  place-content: center;
+  place-items: center;
+
 }
 
-#menu{
-  position: fixed;
-  top: 100px;
-  font-size: 100px;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1;
-  left: 20px;
-  z-index: 100;
-  cursor: pointer;
-}
+
 
 #content{
+
   position: relative;
   margin: 100px auto;
   padding: 20px;
   max-width: 1000px;
 }
 
-.set{
-  background-color: #ccc;
-  min-height: 400px;
+
+.set1{
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 600px;
+  margin-top: 20px;
   margin-bottom: 40px;
+  border: 2px solid #af6b28; 
+  border-radius: var(--border-radius); /* 使用CSS变量来设置圆角 */
+
+  /*追加しました。 */
+  position: relative;
 }
 
-body.one #backimg01,
-body.two #backimg02,
-body.three #backimg03{
+
+
+.set1 img.zhuan {
+  width: 6%; /* 图片宽度相对于包含元素的12% */
+  top: 260px; 
+  left: 46%; 
+  position: absolute; /* relative;をabsoluteに変更*/
+}
+
+
+.set1 img.chuanchao {
+  width: 10%; 
+  top: 360px; 
+  left: 32%; 
+  position: absolute;
+}
+
+.set1 img.jinchun {
+  width: 16%; 
+  top: 240px; 
+  left: 68%; 
+  position: absolute; 
+}/*最大那个*/
+
+
+.set1 img.jinzhan {
+  width: 8%; 
+  top: 56%; 
+  left: 56%; 
+  position: absolute; 
+}/*上下结构的那个*/
+
+.set1 img.sim-ch {
+  width: 4%; 
+  top: 72%; 
+  left: 24%; 
+  position: absolute; 
+}
+
+.set1 img.tra-ch {
+  width: 6%; 
+  top: 76%; 
+  left: 50%; 
+  position: absolute; 
+}
+
+.set1 img.jp-kanji {
+  width: 3%; 
+  top: 88%; 
+  left: 84%; 
+  position: absolute; 
+}
+
+.set1 img.xizhou {
+  width: 6%; 
+  top: 64%; 
+  left: 88%; 
+  position: absolute; 
+}
+
+.set1 img.han01 {
+  width: 12%; 
+  top: 76%; 
+  left: 64%; 
+  position: absolute; 
+}
+
+.set1 img.han02 {
+  width: 14%; 
+  top: 32%; 
+  left: 16%; 
+  position: absolute; 
+}
+
+.set1 img.han03 {
+  width: 6%; 
+  top: 32%; 
+  left: 84%; 
+  position: absolute; 
+}
+
+/*小窗口*/
+/* 初始状态 */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 鼠标悬停状态 */
+.image-container:hover img {
+  transform: scale(1.2);
+  filter: brightness(80%);
+}
+
+/* 小窗口样式 */
+.hover-window {
+  position: absolute;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 217, 165, 0.3);
+  padding: 32px;
+  border-radius: 10px;
+  transition: border-radius 2s ease; 
+  display: none;
+  height: auto;
+  width: 400px;
+  transition: all 10s ease;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.extra-info {
+  display: inline-block;
+}
+
+.image-container:hover .hover-window {
+  display: block;
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.image-container:hover .hover-window.active {
+  width: 100%;
+  height: 100%;
   opacity: 1;
 }
+
+/*animation*/
+.hoverable-image {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hover-window {
+  transition: transform 0.5s ease;
+  
+}
+
+/*小窗口结束*/
+
+
+.set2{
+  background-color: rgba(245, 238, 222, 0.5);
+  min-height: 400px;
+  margin-bottom: 40px;
+
+  display:flex;
+  gap:20px;
+}
+
+
+.set201{
+  background-color: rgba(255, 255, 255, 1);
+  height: 150px;
+  width: 150px;
+  border: 1px solid #af6b28; 
+  border-radius: var(--border-radius); 
+  margin-bottom: 40px;
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 5%
+}
+
+.set201 img {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.set201 img:first-child {
+  opacity: 1; /* 第一张图片可见 */
+}
+
+.set202{
+  margin: 50px;
+  position:absolute;
+  left:200px;
+  width:auto;
+}
+
+.set202 p:first-child {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 22px; 
+}
+
+.set202 p {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px; 
+  line-height: 1.5; 
+}
+
+
+/*place for set203
+set2の一番下に置いて、set201の図象の変化と共に文書が変わる
+できなかった原因：いくつかの字の年代が確定できないからメインの説明ができない。時間も紹介できない説明文は、、
+*/
+
 
 #back{
   position: fixed;
@@ -65,28 +270,15 @@ body.three #backimg03{
   height: 100%;
   top: 0;
   left: 0;
-  background: #fcfcfc;
+  background-image:url(../images/background.png) ;
+  background-size: 100%;
 }
 
-.backimg{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 1s all;
-}
 
-img{
+
+/* imgだとページ内の全画像に適用されてしまうので imgから .backimg img に変更*/
+.backimg img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-#line{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(to right, blue,red);
 }

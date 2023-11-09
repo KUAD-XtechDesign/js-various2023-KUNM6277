@@ -3,43 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 必要なライブラリをネット上から直接参照 CDN -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 自分のcss -->
     <link rel="stylesheet" href="./css/style02.css" />
-    <title>sample02</title>
+    <title>漢の字</title>
+
+    
   </head>
   <body class="one">
     <div class="wrapper">
       
       <header>
-        <h1>site name</h1>
-        <div id="wave"></div>
-        <div id="line"></div>
+        <h1><img src="images/logozhuan.png" alt="漢"></h1>
+        <p>　　漢の字</p>
+        
       </header>
 
       <div id="back">
-        <div id="backimg01" class="backimg"><img src="./images/back01.jpg" alt=""></div>
-        <div id="backimg02" class="backimg"><img src="./images/back02.jpg" alt=""></div>
-        <div id="backimg03" class="backimg"><img src="./images/back03.jpg" alt=""></div>
+        <div id="backimg01" class="back"></div>
       </div>
 
-      <ul id="menu">
-        <li id="btn01">MENU1</li>
-        <li id="btn02">MENU2</li>
-        <li id="btn03">MENU3</li>
-      </ul>
+     
 
       <div id="content">
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
-        <div class="set"></div>
+        <div class="set1">
+
+            <div class="image-container"></div>
+              <img src="images/logozhuan.png" alt="zhuan" id="zhuan" class="hoverable-image zhuan">
+              <!--小窗口-->
+              <div class="hover-window">
+                <p>小篆　秦王朝～前漢（222BC~8年）</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/chuanchao.png" alt="chuanchao" class="hoverable-image chuanchao">
+            <div class="hover-window">
+              <p>流伝古文 （小篆）整理：闵齐伋1661年</p>
+             </div>
+
+            <div class="image-container"></div>
+            <img src="images/jinchun.png" alt="jinchun" class="hoverable-image jinchun">
+            <div class="hover-window">
+                <p>金文（春秋）</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/jinzhan.png" alt="jinzhan" class="hoverable-image jinzhan">
+            <div class="hover-window">
+                <p>金文（戦国）</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/sim-ch.png" alt="sim-ch" class="hoverable-image sim-ch"> 
+            <div class="hover-window">
+                <p>簡体字</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/tra-ch.png" alt="tra-ch" class="hoverable-image tra-ch">
+            <div class="hover-window">
+                <p>繁体字</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/jp-kanji.png" alt="jp-kanji" class="hoverable-image jp-kanji">
+            <div class="hover-window">
+              <p>日本の漢字（新字体）</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/xizhou-zhuan-01.png" alt="xizhou" class="hoverable-image xizhou">
+                     <div class="hover-window">
+                <p>小篆 西周（1045BC～771BC）</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/han-li-01.png" alt="han01" class="hoverable-image han01">
+            <div class="hover-window">
+              <p>隶书　漢王朝　第一種</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/han-li-02.png" alt="han02" class="hoverable-image han02">
+            <div class="hover-window">
+              <p>隶书　漢王朝　第二種</p>
+            </div>
+
+            <div class="image-container"></div>
+            <img src="images/han-li-03.png" alt="han03" class="hoverable-image han03">
+            <div class="hover-window">
+              <p>隶书　漢王朝　第三種</p>
+           </div>
+
+        </div>
+
+       
+
+        <div class="set2">
+         <div class="set201">
+          <img src="images/xizhou-zhuan-01.png" alt="xizhou" class="hoverable-image xizhou">
+          <img src="images/jinchun.png" alt="jinchun" class="hoverable-image jinchun">
+          <img src="images/jinzhan.png" alt="jinzhan" class="hoverable-image jinzhan">
+          <img src="images/chuanchao.png" alt="chuanchao" class="hoverable-image chuanchao">
+          <img src="images/logozhuan.png" alt="zhuan" id="zhuan" class="hoverable-image zhuan">
+          <img src="images/han-li-01.png" alt="han01" class="hoverable-image han01">
+          <img src="images/han-li-02.png" alt="han02" class="hoverable-image han02">
+          <img src="images/han-li-03.png" alt="han03" class="hoverable-image han03">
+          <img src="images/tra-ch.png" alt="tra-ch" class="hoverable-image tra-ch">
+          <img src="images/jp-kanji.png" alt="jp-kanji" class="hoverable-image jp-kanji">
+          <img src="images/sim-ch.png" alt="sim-ch" class="hoverable-image sim-ch"> 
+         </div>
+
+         <div class="set202">
+          <p>漢，漾也。東爲滄浪水。从水，難省聲。(『説文解字』後漢　)</p>
+          <p><br>漢は、漾という名の川である。また東に向かって流れて、滄浪の水と称する。<br>意味には「水」に関わり、発音は「難」に従う。</p>
+          <p>「漢」という字は、具体的にいつから生まれたのかは定説がないが、漢字システムで相対的に遅く現れたことが確定できる。甲骨文には「漢」という字がなく、西周と春秋金文には似た字が既に存在している。</p>
+        </div>
+
+        <!--
+        <div class="set203">
+          <p >小篆 西周（1045BC～771BC）</p>
+          <p>金文（春秋）</p>
+          <p>金文（戦国）</p>
+          <p>流伝古文 （小篆）整理：闵齐伋1661年</p>
+          <p>小篆　秦王朝～前漢（222BC~8年）</p>
+          <p>隶书　漢王朝　第一種</p>
+          <p>隶书　漢王朝　第二種</p>
+          <p>隶书　漢王朝　第三種</p>
+          <p>繁体字</p>
+          <p>日本の漢字（新字体）</p>
+          <p>簡体字</p>
+        </div>
+          -->
+     
+      
       </div>
     </div>
 
@@ -47,6 +146,7 @@
     <!-- 必要なライブラリをネット上から直接参照 CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- 自分のjs -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script02.js"></script>
   </body>
 </html>
