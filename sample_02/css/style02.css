@@ -82,7 +82,7 @@ header img[alt="漢"] {
 
 .set1{
   background-color: rgba(255, 255, 255, 0.8);
-  min-height: 400px;
+  min-height: 600px;
   margin-top: 20px;
   margin-bottom: 40px;
   border: 2px solid #1b7d84; 
@@ -94,20 +94,115 @@ header img[alt="漢"] {
 
 
 
-.set1 img.篆 {
-  width: 12%; /* 图片宽度相对于包含元素的12% */
-  height: auto;
-  top: 300px; 
-  left: 60%; 
+.set1 img.zhuan {
+  width: 6%; /* 图片宽度相对于包含元素的12% */
+  top: 260px; 
+  left: 46%; 
   position: absolute; /* relative;をabsoluteに変更*/
 }
 
-.set1 img.传抄古文 {
-  width: 14%; 
-  top: 18%; 
-  left: 18%; 
-  position: absolute; /* relative;をabsoluteに変更*/
+
+.set1 img.chuanchao {
+  width: 10%; 
+  top: 360px; 
+  left: 32%; 
+  position: absolute;
 }
+
+.set1 img.jinchun {
+  width: 16%; 
+  top: 240px; 
+  left: 68%; 
+  position: absolute; 
+}/*最大那个*/
+
+
+.set1 img.jinzhan {
+  width: 8%; 
+  top: 56%; 
+  left: 56%; 
+  position: absolute; 
+}/*上下结构的那个*/
+
+.set1 img.sim-ch {
+  width: 4%; 
+  top: 72%; 
+  left: 24%; 
+  position: absolute; 
+}
+
+.set1 img.tra-ch {
+  width: 6%; 
+  top: 76%; 
+  left: 50%; 
+  position: absolute; 
+}
+
+.set1 img.jp-kanji {
+  width: 3%; 
+  top: 88%; 
+  left: 84%; 
+  position: absolute; 
+}
+
+.set1 img.xizhou {
+  width: 6%; 
+  top: 64%; 
+  left: 88%; 
+  position: absolute; 
+}
+
+.set1 img.han01 {
+  width: 12%; 
+  top: 76%; 
+  left: 64%; 
+  position: absolute; 
+}
+
+.set1 img.han02 {
+  width: 14%; 
+  top: 32%; 
+  left: 16%; 
+  position: absolute; 
+}
+
+.set1 img.han03 {
+  width: 6%; 
+  top: 32%; 
+  left: 84%; 
+  position: absolute; 
+}
+
+/*小窗口开始*/
+/* 初始状态 */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 鼠标悬停状态 */
+.image-container:hover img {
+  transform: scale(1.2);
+  filter: brightness(80%);
+}
+
+/* 小窗口样式 */
+.hover-window {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.image-container:hover .hover-window {
+  display: block;
+}
+/*小窗口结束*/
+
 
 .set2{
   background-color: rgba(223, 246, 240, 0.8);
